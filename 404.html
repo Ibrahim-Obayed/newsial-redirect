@@ -3,34 +3,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>খবরপাতা এখন newsial.com-এ</title>
+<title>খবরপাতা এখন newsial.com</title>
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://newsial.com/">
 <noscript><meta http-equiv="refresh" content="3;url=https://newsial.com/"></noscript>
 <style>
-  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f6f6f4;color:#1b1b1b;font-family:system-ui,"Noto Sans Bengali",sans-serif;padding:16px;box-sizing:border-box}
-  .c{max-width:420px;text-align:center;background:#fff;border:1px solid #e3e3df;border-radius:14px;padding:28px 22px}
-  h1{font-size:1.35rem;margin:0 0 10px;color:#c0171d}
-  p{line-height:1.7;margin:8px 0}
-  a.b{display:inline-block;margin-top:14px;padding:11px 22px;background:#c0171d;color:#fff;border-radius:10px;text-decoration:none;font-weight:600}
-  .n{font-size:1.5rem;font-weight:700}
-  @media (prefers-color-scheme:dark){body{background:#121212;color:#eee}.c{background:#1c1c1c;border-color:#333}}
+  :root{--g:#0d7a5f;--gd:#095c48;--o:#f6a830;--ink:#171717;--mut:#666;--bg:#f4f1ea;--card:#fff;--line:#e6e1d4}
+  @media (prefers-color-scheme:dark){:root{--g:#4cc79d;--ink:#f3f3f3;--mut:#a5a5a5;--bg:#111;--card:#1b1b1b;--line:#333}}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:18px 16px;background:radial-gradient(900px 420px at 50% -10%,color-mix(in srgb,var(--g) 14%,transparent),transparent 70%),var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali","Kohinoor Bangla","Bangla Sangam MN",sans-serif}
+  .c{width:100%;max-width:460px;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-align:center;box-shadow:0 18px 50px -24px rgba(0,0,0,.35)}
+  .bar{height:6px;background:linear-gradient(90deg,var(--g),var(--o))}
+  .in{padding:26px 22px 22px}
+  .badge{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.02em;color:var(--g);background:color-mix(in srgb,var(--g) 12%,transparent);padding:5px 14px;border-radius:99px}
+  .old{margin:18px 0 0;font-size:1.05rem;color:var(--mut)}
+  .old s{text-decoration-thickness:2px;text-decoration-color:#c0171d}
+  .arrow{margin:2px 0 0;font-size:1.5rem;color:var(--o);line-height:1}
+  .new{margin:6px 0 2px;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-weight:800;font-size:clamp(2.1rem,11.5vw,3.1rem);letter-spacing:-.035em;line-height:1.1;white-space:nowrap}
+  .new .a{color:var(--ink)} .new .b{color:var(--g)} .new .d{color:var(--mut);font-weight:700}
+  .new .i{color:var(--o)}
+  .say{margin:8px 0 0;font-size:1.02rem;line-height:1.6}
+  .say b{color:var(--g)}
+  .rule{margin:16px auto 0;display:inline-block;padding:8px 16px;border-radius:12px;background:color-mix(in srgb,var(--o) 14%,transparent);font-size:.9rem;font-weight:600}
+  .go{margin:20px 0 0;display:flex;align-items:center;justify-content:center;gap:14px}
+  .ring{position:relative;width:54px;height:54px;flex:none}
+  .ring svg{width:54px;height:54px;transform:rotate(-90deg)}
+  .ring circle{fill:none;stroke-width:5}
+  .ring .t{stroke:var(--line)} .ring .p{stroke:var(--g);stroke-linecap:round;stroke-dasharray:138.2;stroke-dashoffset:0;transition:stroke-dashoffset 1s linear}
+  .ring span{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:1.15rem}
+  .btn{display:inline-block;padding:13px 24px;border-radius:13px;background:linear-gradient(135deg,#12906f,#095c48);color:#fff;text-decoration:none;font-weight:700;font-size:1rem;box-shadow:0 10px 20px -10px rgba(13,122,95,.8)}
+  .sec{margin:12px 0 0}
+  .cp{border:1.5px solid var(--line);background:none;color:var(--ink);padding:9px 18px;border-radius:11px;font:inherit;font-size:.88rem;font-weight:600;cursor:pointer}
+  .cp:active{transform:scale(.97)}
+  .tip{margin:16px 0 0;font-size:.8rem;color:var(--mut);line-height:1.6}
 </style>
 </head>
 <body>
-<div class="c">
-  <h1>সাইটের ঠিকানা বদলেছে</h1>
-  <p>খবরপাতা এখন নতুন ঠিকানায়: <b>newsial.com</b></p>
-  <p>আপনাকে <span class="n" id="s">৫</span> সেকেন্ডে নতুন সাইটে নিয়ে যাওয়া হচ্ছে।</p>
-  <a class="b" id="go" href="https://newsial.com/">এখনই যান</a>
-  <p style="font-size:.85rem;opacity:.7">বুকমার্ক বা হোম স্ক্রিনের শর্টকাট থাকলে নতুন ঠিকানায় আবার যোগ করে নিন।</p>
-</div>
+<main class="c">
+  <div class="bar"></div>
+  <div class="in">
+    <span class="badge">📢 ঠিকানা বদলেছে</span>
+    <p class="old">পুরোনো: <s>khoborpata.com</s></p>
+    <p class="arrow" aria-hidden="true">↓</p>
+    <div class="new" aria-label="newsial dot com"><span class="a">news</span><span class="b">ial</span><span class="d">.com</span></div>
+    <p class="say">এখন খবরপাতার নাম <b>নিউজিয়াল</b>।<br>যেমন উচ্চারণ, তেমনই বানান।</p>
+    <div class="rule">মনে রাখুন: <b style="color:var(--g)">নিউজিয়াল ডট কম</b></div>
+    <div class="go">
+      <div class="ring"><svg viewBox="0 0 54 54"><circle class="t" cx="27" cy="27" r="22"/><circle class="p" id="pr" cx="27" cy="27" r="22"/></svg><span id="s">৮</span></div>
+      <a class="btn" id="go" href="https://newsial.com/">এখনই যান →</a>
+    </div>
+    <p class="sec"><button class="cp" id="cp" type="button">ঠিকানা কপি করুন</button></p>
+    <p class="tip">বুকমার্ক বা হোম স্ক্রিনের পুরোনো শর্টকাট মুছে<br><b>newsial.com</b> আবার যোগ করে নিন।</p>
+  </div>
+</main>
 <script>
   var t = "https://newsial.com" + location.pathname.replace(/\/index\.html$/, "/") + location.search + location.hash;
   document.getElementById("go").href = t;
-  var n = 5, bn = "০১২৩৪৫৬৭৮৯", el = document.getElementById("s");
+  var TOTAL = 8, n = TOTAL, bn = "০১২৩৪৫৬৭৮৯", el = document.getElementById("s"), pr = document.getElementById("pr");
   function d(x) { return String(x).replace(/\d/g, function (c) { return bn[c]; }); }
-  var iv = setInterval(function () { n--; el.textContent = d(n); if (n <= 0) { clearInterval(iv); location.replace(t); } }, 1000);
+  var iv = setInterval(function () {
+    n--; el.textContent = d(Math.max(n, 0));
+    pr.style.strokeDashoffset = (138.2 * (TOTAL - n) / TOTAL).toFixed(1);
+    if (n <= 0) { clearInterval(iv); location.replace(t); }
+  }, 1000);
+  document.getElementById("cp").addEventListener("click", function () {
+    var b = this, ok = function () { b.textContent = "✓ কপি হয়েছে: newsial.com"; };
+    try { navigator.clipboard.writeText("newsial.com").then(ok, function () { b.textContent = "newsial.com"; }); } catch (e) { b.textContent = "newsial.com"; }
+  });
   // পুরোনো সাইটের অফলাইন ক্যাশ/সার্ভিস ওয়ার্কার মুছে দেওয়া
   if ("serviceWorker" in navigator) navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }).catch(function () {});
   if (window.caches) caches.keys().then(function (ks) { ks.forEach(function (k) { caches.delete(k); }); }).catch(function () {});
