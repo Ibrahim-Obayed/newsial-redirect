@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>খবরপাতা এখন newsial.com-এ</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://newsial.com/">
+<noscript><meta http-equiv="refresh" content="3;url=https://newsial.com/"></noscript>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f6f6f4;color:#1b1b1b;font-family:system-ui,"Noto Sans Bengali",sans-serif;padding:16px;box-sizing:border-box}
+  .c{max-width:420px;text-align:center;background:#fff;border:1px solid #e3e3df;border-radius:14px;padding:28px 22px}
+  h1{font-size:1.35rem;margin:0 0 10px;color:#c0171d}
+  p{line-height:1.7;margin:8px 0}
+  a.b{display:inline-block;margin-top:14px;padding:11px 22px;background:#c0171d;color:#fff;border-radius:10px;text-decoration:none;font-weight:600}
+  .n{font-size:1.5rem;font-weight:700}
+  @media (prefers-color-scheme:dark){body{background:#121212;color:#eee}.c{background:#1c1c1c;border-color:#333}}
+</style>
+</head>
+<body>
+<div class="c">
+  <h1>সাইটের ঠিকানা বদলেছে</h1>
+  <p>খবরপাতা এখন নতুন ঠিকানায়: <b>newsial.com</b></p>
+  <p>আপনাকে <span class="n" id="s">৫</span> সেকেন্ডে নতুন সাইটে নিয়ে যাওয়া হচ্ছে।</p>
+  <a class="b" id="go" href="https://newsial.com/">এখনই যান</a>
+  <p style="font-size:.85rem;opacity:.7">বুকমার্ক বা হোম স্ক্রিনের শর্টকাট থাকলে নতুন ঠিকানায় আবার যোগ করে নিন।</p>
+</div>
+<script>
+  var t = "https://newsial.com" + location.pathname.replace(/\/index\.html$/, "/") + location.search + location.hash;
+  document.getElementById("go").href = t;
+  var n = 5, bn = "০১২৩৪৫৬৭৮৯", el = document.getElementById("s");
+  function d(x) { return String(x).replace(/\d/g, function (c) { return bn[c]; }); }
+  var iv = setInterval(function () { n--; el.textContent = d(n); if (n <= 0) { clearInterval(iv); location.replace(t); } }, 1000);
+  // পুরোনো সাইটের অফলাইন ক্যাশ/সার্ভিস ওয়ার্কার মুছে দেওয়া
+  if ("serviceWorker" in navigator) navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }).catch(function () {});
+  if (window.caches) caches.keys().then(function (ks) { ks.forEach(function (k) { caches.delete(k); }); }).catch(function () {});
+</script>
+</body>
+</html>
